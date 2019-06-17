@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import { FaSearch } from 'react-icons/fa';
+import { FaSearch } from 'react-icons/fa';
 
 class RecipeSearch extends Component {
   render() {
@@ -20,7 +20,7 @@ class RecipeSearch extends Component {
                     className="form-control" type="text" name="search" placeholder="chicken,onions,carrots" />
                   <div className="input-group-append">
                     <button type="submit" className="input-group-text bg-primary text-white">
-                      {/* <FaSearch /> */} search
+                      <FaSearch />
                     </button>
                   </div>
                 </div>
