@@ -8,7 +8,7 @@ class RecipeDetails extends Component {
   //   super(props)
   //   this.state= {
   //     recipe: recipe,
-  //     url: `https://www.food2fork.com/api/search?key=6e608c1673bfeae4ff3113ba433e5f0f&rId=${ this.props.id }`
+  //     url: `https://www.food2fork.com/api/get?key=${process.env.REACT_APP_API_KEY}&rId=${ this.props.id }`
   //   }
   // }
 
@@ -32,7 +32,7 @@ class RecipeDetails extends Component {
 
   async componentDidMount() {
     const id = this.props.id;
-    const url = `https://www.food2fork.com/api/get?key=6e608c1673bfeae4ff3113ba433e5f0f&rId=${id}`;
+    const url = `https://www.food2fork.com/api/get?key=${process.env.REACT_APP_API_KEY}&rId=${id}`;
     try {
       const data = await fetch(url);
       const jsonData = await data.json();
